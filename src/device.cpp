@@ -12,12 +12,14 @@ namespace rtp
 {
 	namespace device
 	{
-		void error_callback(int error, const char* description)
+		namespace internal
+		{
+			void error_callback(int error, const char* description)
 		{
 			fputs(description, stderr);
 		}
-
-		static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
+			
+			static void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)
 		{
 			if (action == GLFW_PRESS)
 			{
@@ -31,9 +33,7 @@ namespace rtp
 				}
 			}
 		}
-
-		namespace internal
-		{
+			
 			GLFWwindow* window = nullptr;
 			GLFWmonitor* monitor = NULL;
 		}
