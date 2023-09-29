@@ -18,7 +18,7 @@ int main(int argc, char** argv)
 	// the main loop
 	while (!rtp::device::should_close())
 	{
-
+		rtp::device::update();
 	}
 
 	rtp::device::shutdown();

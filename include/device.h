@@ -17,6 +17,11 @@ namespace rtp
 		bool should_close();
 
 		/// <summary>
+		/// poll events and swap buffers
+		/// </summary>
+		void update();
+
+		/// <summary>
 		/// clean up and shut down device
 		/// </summary>
 		void shutdown();
